@@ -173,38 +173,46 @@ body {
     width: 58%;
     margin: auto;
     padding: 85px 0;
+    .footer-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 85px;
 
-    .footer-credit {
-        margin-left: 115px;
+        .footer-credit {
+            width: 240px;
 
-        p {
-            width: 40%;
-            font-size: 16px;
-            line-height: 25px;
+            p {
+                // width: 40%;
+                font-size: 16px;
+                line-height: 35px;
+            }
+
+            span {
+                font-weight: 700;
+            }
         }
 
-        span {
-            font-weight: 700;
-        }
-    }
+        .social-icons {
+            width: auto;
+            min-width: 25%;
+            margin-left: auto;
+            margin-top: auto;
+            margin-bottom: auto;
 
-    .social-icons {
-        margin-left: auto;
-        margin-top: auto;
-        margin-bottom: auto;
+            img {
+                transition: 0.5s;
+                cursor: pointer;
+            }
 
-        img{
-            transition: 0.5s;
-            cursor: pointer;
-        }
+            img:not(:last-child) {
+                margin-right: 20px;
+                color: #fa7453;
+            }
 
-        img:not(:last-child){
-            margin-right: 20px;
-            color: #fa7453;
-        }
-
-        img:last-child{
-            margin-right: 15px;
+            img:last-child {
+                margin-right: 15px;
+            }
         }
     }
 }
@@ -243,7 +251,10 @@ body {
 @media (max-width: 1150px) {
     .hero-section {
         .hero-section-left-part {
-            padding: 52px 0 0 70px;
+            padding-top: 52px;
+            padding-left: 52px;
+            width: auto;
+            margin: auto;
 
             .hero-section-title {
                 h2 {
@@ -255,6 +266,34 @@ body {
                 p {
                     font-size: 16px;
                 }
+            }
+        }
+    }
+
+    .app-section {
+        width: auto;
+        max-width: 1110px;
+
+        .app-left-part {
+            transform: translate(55px, -110px);
+        }
+
+        .app-right-part {
+            transform: translate(-45px, 200px);
+        }
+    }
+
+    .footer-section {
+        flex-direction: column;
+        width: 100%;
+        padding: 85px 55px;
+
+        .footer-row {
+            margin-left: 0;
+            margin-top: 45px;
+
+            .footer-credit {
+                width: 100%;
             }
         }
     }
@@ -290,7 +329,54 @@ body {
         }
     }
 }
+@media (max-width: 615px) {
+    .app-section {
+        flex-direction: column;
+        margin-top: 330px;
 
+        .app-left-part {
+            transform: translate(0, 180px);
+            margin: 0 auto 220px auto;
+        }
+
+        .app-right-part {
+            transform: translate(0, 0);
+            margin: 0 auto 100px auto;
+            width: 100%;
+        }
+        .app-title,
+        .app-text,
+        .app-price,
+        .app-btn-container {
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-price {
+            margin: 45px auto !important;
+        }
+
+        .app-btn-container {
+            button {
+                min-width: 70%;
+                width: auto;
+                max-width: 90%;
+                margin: auto;
+            }
+        }
+    }
+
+    .footer-section {margin-top: 300px;
+        .footer-row {
+            flex-direction: column;
+            .social-icons {
+                margin-left: 0;
+                margin-top: 45px;
+            }
+        }
+    }
+}
 @media (max-width: 600px) {
     .hero-section {
         .hero-section-left-part {
@@ -310,6 +396,37 @@ body {
                     font-size: 15px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .app-section {
+        .app-title,
+        .app-text,
+        .app-price,
+        .app-btn-container {
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-section {
+        .hero-section-left-part {
+            .hero-section-title {
+                h2 {
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+
+    .app-section {
+        .app-right-part {
+            height: auto;
         }
     }
 }
